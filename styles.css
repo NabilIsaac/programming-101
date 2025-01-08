@@ -1,0 +1,46 @@
+nav {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between <h1> and navigation menu */
+  align-items: center; /* Vertically align items */
+
+}
+
+nav h1 {
+  margin: 0; /* Remove default margin */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Arrange list items horizontally */
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: yellow;
+}
+
+.home {
+  background-color: yellow;
+  color: black;
+}
+.content {
+  display: flex;
+  padding: 10px;
+}  

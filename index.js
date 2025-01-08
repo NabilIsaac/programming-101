@@ -5,6 +5,7 @@
   let score2 = parseFloat(prompt("Enter your score for Subject 2:"));
   let score3 = parseFloat(prompt("Enter your score for Subject 3:"));
 
+
   // Step 2: Calculate the average score
   let average = (score1 + score2 + score3) / 3;
 
@@ -42,5 +43,6 @@
   
 /*
 assignment
-write about your self on the about page, your contact on the contact page and leave the index page as it is
+add 3 inputs, one for name, one for email, one for phone, and one for address
+
 */
