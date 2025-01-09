@@ -44,3 +44,8 @@ nav ul li a:hover {
   display: flex;
   padding: 10px;
 }  
+
+.login {
+  margin-left: 5px;
+
+}

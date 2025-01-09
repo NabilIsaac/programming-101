@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+      }
+      
+      header h1 {
+        margin: 0;
+      }
+      
+      header ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header ul li {
+        margin-left: 15px;
+      }
+      
+      header ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+      
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-color: lightblue;
+        }
+        footer {
+            display: none;
+          }
+      }
+      
+</style>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>This is a responsive webpage example using Flexbox.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+</body>
+</html>
