@@ -24,3 +24,8 @@ comparison operators
 >= 	greater than or equal to 	
 
 <= 	less than or equal to 	
+
+
+html
+css
+javascript

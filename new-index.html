@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Form Example</title>
+    </head>
+    <body>
+        <form id="userForm">
+            <!-- <p></p> -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <br /><br />
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" />
+            <br /><br />
+            <button id="btn" type="submit">Submit</button>
+        </form>
+
+        <script>
+            // const addButton = document.createElement("button");
+            // addButton.textContent = "Add Field";
+            // document.body.appendChild(addButton);
+
+            // addButton.addEventListener("click", () => {
+            //   const newField = document.createElement("input");
+            //   newField.type = "text";
+            //   newField.placeholder = "Additional Field";
+            //   form.appendChild(newField);
+            // });
+
+            const form = document.getElementById("userForm");
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault(); // Prevent page reload
+                // window.location = "index.html";
+                // Get form values
+                // const name = document.getElementById("name").value;
+                // const email = document.getElementById("email").value;
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+
+                const result = document.createElement("p");
+                result.textContent = `Submitted Name: ${name}, Email: ${email}`;
+                document.body.appendChild(result);
+                if (name === "" || email === "") {
+                    alert("all fields are required");
+                    return;
+                }
+                if (name !== "" && email !== "") {
+                    const btn = document.getElementById("btn");
+                    btn.textContent = `Update`;
+                    document.body.appendChild(btn);
+                    return;
+                }
+
+                // if (!email.includes("@")) {
+                //     alert("Invalid email address!");
+                //     return;
+                // }
+
+                // console.log(`Name: ${name}, Email: ${email}`);
+                // alert(`Form submitted! Name: ${name}, Email: ${email}`);
+            });
+        </script>
+    </body>
+</html>
