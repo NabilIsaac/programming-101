@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            transition: background-color 0.5s ease; /* Smooth transition */
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .check-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .change-btn {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Voting Eligibility Checker</h2>
+
+    <input type="text" id="ageInput" placeholder="Enter your age">
+    <br>
+    <button class="check-btn" onclick="checkEligibility()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <button class="change-btn" onclick="changeBackground()">Change Background</button>
+
+    <script>
+        function checkEligibility() {
+            let age = document.getElementById("ageInput").value;
+            
+            // Validate if the input is a number
+            if (isNaN(age) || age.trim() === "") {
+                document.getElementById("result").innerText = "Please enter a valid number.";
+                document.getElementById("result").style.color = "red";
+                return;
+            }
+
+            age = parseInt(age);
+            let message = (age >= 18) ? "✅ You are eligible to vote!" : "❌ You are not eligible to vote yet.";
+
+            document.getElementById("result").innerText = message;
+            document.getElementById("result").style.color = (age >= 18) ? "green" : "red";
+        }
+
+        function changeBackground() {
+            let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>

@@ -57,7 +57,7 @@
     </style>
 </head>
 <body>
-    <div class="calculator">
+    <main class="calculator">
         <div class="display" id="display">0</div>
         <div class="buttons">
             <button class="button" onclick="appendNumber('7')">7</button>
@@ -77,67 +77,7 @@
             <button class="button" onclick="calculate()">=</button>
             <button class="button operator" onclick="chooseOperation('+')">+</button>
         </div>
-    </div>
-    <script>
-        let display = document.getElementById('display');
-        let currentOperand = '';
-        let previousOperand = '';
-        let operation = undefined;
-
-      
-        function appendNumber(number) {
-            if (number === '0' && currentOperand === '0') return;
-            currentOperand = currentOperand.toString() + number.toString();
-            updateDisplay();
-        }
-
-        function chooseOperation(op) {
-            if (currentOperand === '') return;
-            if (previousOperand !== '') {
-                calculate();
-            }
-            operation = op;
-            previousOperand = currentOperand;
-            currentOperand = '';
-        }
-
-        function calculate() {
-            let result;
-            const prev = parseFloat(previousOperand);
-            const current = parseFloat(currentOperand);
-            if (isNaN(prev) || isNaN(current)) return;
-            switch (operation) {
-                case '+':
-                    result = prev + current;
-                    break;
-                case '-':
-                    result = prev - current;
-                    break;
-                case '*':
-                    result = prev * current;
-                    break;
-                case '/':
-                    result = prev / current;
-                    break;
-                default:
-                    return;
-            }
-            currentOperand = result;
-            operation = undefined;
-            previousOperand = '';
-            updateDisplay();
-        }
-
-        function clearDisplay() {
-            currentOperand = '';
-            previousOperand = '';
-            operation = undefined;
-            updateDisplay();
-        }
-
-        function updateDisplay() {
-            display.innerText = currentOperand;
-        }
-    </script>
+    </main>
+   <script src="calculator.js" ></script>
 </body>
 </html>
